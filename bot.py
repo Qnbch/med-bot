@@ -15,7 +15,7 @@ from aiogram.types import (
 )
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.fsm.storage.redis import RedisStorage
 from aiogram.filters import CommandStart
 
 # ─────────────────────────────────────────
@@ -679,7 +679,9 @@ def register_handlers(dp: Dispatcher):
 async def main():
     logging.basicConfig(level=logging.INFO)
     bot = Bot(token=BOT_TOKEN)
-    dp = Dispatcher(storage=MemoryStorage())
+    import os
+redis_url = os.getenv("REDIS_URL", "redis://localhost")
+dp = Dispatcher(storage=RedisStorage.from_url(redis_url))
     register_handlers(dp)
     print("Бот запущен!")
     await dp.start_polling(bot)
