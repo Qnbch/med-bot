@@ -23,10 +23,10 @@ from aiogram.filters import CommandStart
 # ─────────────────────────────────────────
 # НАСТРОЙКИ — заполни перед запуском
 # ─────────────────────────────────────────
-BOT_TOKEN = "ВАШ_ТОКЕН_ОТ_BOTFATHER"   # токен бота
-DOCTOR_CHAT_ID = 123456789              # твой Telegram ID (узнать: @userinfobot)
-CARD_NUMBER = "2200 0000 0000 0000"     # номер карты для оплаты
-CARD_NAME = "Иванова Анна Ивановна"    # имя на карте
+BOT_TOKEN = "8624543729:AAGQmiTzn8jn8JDTh1H5QewNVTjTGaG-SNI"   # токен бота
+DOCTOR_CHAT_ID = 295089104 # твой Telegram ID (узнать: @userinfobot)
+CARD_NUMBER = "5536 9140 5440 4946"     # номер карты для оплаты
+CARD_NAME = "ARINA VANYUSHKINA"    # имя на карте
 
 # Цены (руб)
 PRICES = {
